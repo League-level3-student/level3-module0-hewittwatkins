@@ -40,11 +40,33 @@ public class _02_RobotRace {
     
         // 6. use a while loop to repeat step 5 until a robot has reached the top of the
         // screen.
+		
+		boolean reachedTop = false;
+		int winnerIndex;
+		while (reachedTop == false) {
+			for (Robot i: robots) {
+				Random rand = new Random();
+				int randInt1 = rand.nextInt(50);
+				i.move(randInt1);;
+				num++;
+				if (i.getY() >= 400) {
+					reachedTop = true;
+					winnerIndex = i;
+					i.sparkle();
+				}
+			}
+		}
     
         // 7. declare that robot the winner and throw it a party!
     
+		// above ^^^^^^^
+		
         // 8. try different races with different amounts of robots.
+		
+		// above ^^^^^^
     
         // 9. make the robots race around a circular track.
+		
+		// above ^^^^^^
 	}
 }
