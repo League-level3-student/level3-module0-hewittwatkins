@@ -12,4 +12,6 @@ public class Pixel{
         this.y = y;
         color = Color.WHITE;
     }
+    
+ 
 }
