@@ -4,11 +4,20 @@ public class _02_RowColumnSum {
 
     public int getSumByRow(int[][] matrix, int row) {
         
-        return 0;
-    }
+    	int rowSum = 0;
+    	for (int i = 0; i < matrix[row].length; i++) {
+    		rowSum += matrix[row][i];
+    	}
+    	return rowSum;
+    }	
+    
     
     public int getSumByColumn(int[][] matrix, int col) {
         
-        return 0;
+        int colSum = 0;
+        for (int i = 0; i < matrix.length; i++) {
+        	colSum = matrix[i][col];
+        }
+        return colSum;
     }
 }

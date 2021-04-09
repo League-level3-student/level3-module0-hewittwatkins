@@ -41,7 +41,7 @@ public class GridPanel extends JPanel{
         // 3. Iterate through the array and initialize each element to a new pixel.
         for (int i = 0; i < rows; i++) {
         	for (int j = 0; j < cols; j++) {
-        		pixels[i][j] = new Pixel(i, j);
+        		pixels[i][j] = new Pixel(i*10, j*10);
         	}
         }
 
@@ -61,6 +61,13 @@ public class GridPanel extends JPanel{
         		}
         	}
         }
+    	
+    	mouseX = mouseX/10;
+    	mouseY = mouseY/10;
+    	
+    	if (mouseX <= pixels.length && mouseY <= pixels[mouseX].length) {
+    		pixels[mouseX][mouseY].color = color;
+    	}
     	
     }
 
